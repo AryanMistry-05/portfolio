@@ -24,7 +24,7 @@ const projects = [
   },
 ];
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Vite", "Git", "Python", "Node.js"];
+const skills = ["HTML", "CSS", "JavaScript", "React", "Vite", "Git"];
 
 function useInView(threshold = 0.15) {
   const ref = useRef(null);
@@ -309,20 +309,22 @@ export default function App() {
                   ))}
                 </div>
                 <div style={{ display: "flex", gap: 10 }}>
-                  {["Live ↗", "GitHub"].map(label => (
-                    <button key={label} style={{
-                      flex: 1, padding: "9px 0",
-                      background: label.includes("Live") ? `${p.color}18` : "transparent",
-                      border: `1px solid ${label.includes("Live") ? p.color + "44" : "rgba(255,255,255,0.1)"}`,
-                      color: label.includes("Live") ? p.color : "#64748b",
-                      borderRadius: 10, fontSize: 13, cursor: "pointer",
-                      fontFamily: "'DM Mono', monospace", letterSpacing: 1,
-                      transition: "background .2s",
-                    }}
-                      onMouseEnter={e => e.target.style.background = `${p.color}28`}
-                      onMouseLeave={e => e.target.style.background = label.includes("Live") ? `${p.color}18` : "transparent"}
-                    >{label}</button>
-                  ))}
+                  <a href="https://github.com/AryanMistry-05" target="_blank" rel="noopener noreferrer" style={{
+                    flex: 1, padding: "9px 0", textAlign: "center", textDecoration: "none",
+                    background: `${p.color}18`,
+                    border: `1px solid ${p.color}44`,
+                    color: p.color,
+                    borderRadius: 10, fontSize: 13, cursor: "pointer",
+                    fontFamily: "'DM Mono', monospace", letterSpacing: 1,
+                    transition: "background .2s",
+                    display: "flex", alignItems: "center", justifyContent: "center", gap: 7,
+                  }}
+                    onMouseEnter={e => e.currentTarget.style.background = `${p.color}30`}
+                    onMouseLeave={e => e.currentTarget.style.background = `${p.color}18`}
+                  >
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    GitHub ↗
+                  </a>
                 </div>
               </div>
             ))}
@@ -403,7 +405,7 @@ export default function App() {
         flexWrap: "wrap", gap: 12, position: "relative", zIndex: 1,
       }}>
         <span style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, color: "#a78bfa" }}>AM<span style={{ color: "#34d399" }}>.</span></span>
-        <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 12, color: "#334155", letterSpacing: 1 }}>© 2026 Aryan Mistry</span>
+        <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 12, color: "#334155", letterSpacing: 1 }}>© 2025 Aryan Mistry</span>
       </footer>
 
       <style>{`
