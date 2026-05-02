@@ -1,0 +1,36 @@
+/* Base reset — all design lives in App.jsx inline styles */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #080b14;
+  color: #e2e8f0;
+  font-family: 'DM Sans', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: none;
+}
+
+/* Hide default cursor on desktop for custom cursor */
+@media (pointer: fine) {
+  * { cursor: none !important; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #080b14; }
+::-webkit-scrollbar-thumb { background: #a78bfa44; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a78bfa88; }
+
+/* Selection */
+::selection {
+  background: rgba(167, 139, 250, 0.3);
+  color: #e2e8f0;
+}
